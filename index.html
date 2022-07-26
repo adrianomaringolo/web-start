@@ -2,42 +2,49 @@
 
 <head>
   <title>Web Start 🎶</title>
-
+  
   <style>
     body {
       background: #ddd;
     }
   </style>
-
-  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <header>
     <h1>Web Start 🎶</h1>
     <h2>This is a <abbr title="Hypertext markup language">HTML</abbr> page!</h2>
+    <p id='textDateToday'>Hoje é DD/MM</p>
   </header>
 
   <main>
 
-    <p><strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Donec in varius tellus. Proin consectetur feugiat venenatis. <br /><span style="color: red">Cras ut mauris eu lorem auctor lobortis ac accumsan lacus. Aenean blandit purus sit amet rhoncus consequat.</span> Duis posuere elit et pharetra ullamcorper. Sed at velit euismod, efficitur ipsum non, efficitur turpis. Fusce congue, nisi non tristique rutrum, justo enim interdum ex, ut pharetra leo sapien vel enim. Curabitur imperdiet lacinia ullamcorper.</p>
-
+    <p><strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Donec in varius tellus. Proin consectetur feugiat venenatis. <br />
+      <span style="margin-top: 25px; display: inline-block">Cras ut mauris eu lorem auctor lobortis ac accumsan lacus. Aenean blandit purus sit amet rhoncus consequat.</span>
+      <span class="text-light">Duis posuere elit et pharetra ullamcorper. Sed at velit euismod, efficitur ipsum non, efficitur turpis. Fusce congue, nisi non tristique rutrum.
+      </span>
+      <span class="text-light" id="text-quotation"> justo enim interdum ex, ut pharetra leo sapien vel enim. Curabitur imperdiet lacinia ullamcorper.</span>
+    </p>
+    
+    <div class="image-section">
     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt="Paisagem" height="150">
+    </div>
 
-    <hr />
 
-    <ol>
+    <ol id="name-list">
       <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
     </ol>
-
-    <form>
-      <div>
+    
+    <form onsubmit="return sendForm()">
+      <div class="required">
         <label for="txt-name">Name</label>
         <input type="text" id="txt-name">
+        <p id="inputName"></p>
+        <p class="error" id="name-error">Name is required</p>
       </div>
-      <div>
+      <div  class="required">
         <label for="dt-bith">Birthday</label>
         <input type="date" id="dt-bith">
       </div>
@@ -49,12 +56,12 @@
       <button type="reset">Clear</button>
     </form>
   </main>
-  
+
   <footer>
-     <p><small>Made with ❤️ by DoubleIT Experience</small></p>
+    <p><small>Made with ❤️ by DoubleIT Experience</small></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>
